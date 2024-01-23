@@ -2,7 +2,6 @@ import CalendarView from "@/components/calendar-view";
 import Logs from "@/components/logs";
 import Navbar from "@/components/navbar";
 import { NewLog } from "@/components/new-log";
-import Image from "next/image";
 
 export default function Home() {
 	return (

@@ -23,20 +23,18 @@ export default function Logs() {
 				</TableRow>
 			</TableHeader>
 			<TableBody>
-				{Object.keys(logs).map(key)=>{
-					const log =logs[key]
+				{Object.keys(logs).map((key) => {
+					const log = logs[key];
 					return (
-	<TableRow key={key}>
-					<TableCell className="font-medium">
-						{log.date.toDateString()}
-					</TableCell>
-					<TableCell>{log.hour}</TableCell>
-					<TableCell>{log.note}</TableCell>
-				</TableRow>
-
-					)
-				}}
-			
+						<TableRow key={key}>
+							<TableCell className="font-medium">
+								{log.date.toDateString()}
+							</TableCell>
+							<TableCell>{log.hour}</TableCell>
+							<TableCell>{log.note}</TableCell>
+						</TableRow>
+					);
+				})}
 			</TableBody>
 		</Table>
 	);
