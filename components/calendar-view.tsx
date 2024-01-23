@@ -28,23 +28,25 @@ export default function CalendarView() {
 	};
 	return (
 		<div className="border flex gap-2 flex-wrap justify-center border-dashed p-10 rounded-md">
-			{getDateInMonth().map((date, index) => (
-				const log=logs[date]
+			{getDateInMonth().map((date, index) => {
+				const log = logs[date];
 
-				<HoverCard key={index}>
-					<HoverCardTrigger>
-						<div
-							className={cn(
-								"w-5 h-5 bg-gray-200 rounded-sm cursor-pointer",
-								getColor(log?.hour || 0)
-							)}
-						></div>
-					</HoverCardTrigger>
-					<HoverCardContent>
-						{log?.hour} hours on {date}
-					</HoverCardContent>
-				</HoverCard>
-			))}
+				return (
+					<HoverCard key={index}>
+						<HoverCardTrigger>
+							<div
+								className={cn(
+									"w-5 h-5 bg-gray-200 rounded-sm cursor-pointer",
+									getColor(log?.hour || 0)
+								)}
+							></div>
+						</HoverCardTrigger>
+						<HoverCardContent>
+							{log?.hour} hours on {date}
+						</HoverCardContent>
+					</HoverCard>
+				);
+			})}
 		</div>
 	);
 }
