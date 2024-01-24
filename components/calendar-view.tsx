@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { useLogStore } from "@/store";
 export default function CalendarView() {
 	const logs = useLogStore((state) => state.logs);
-	console.log("🚀 ~ CalendarView ~ logs:", logs)
+
 	function getDateInMonth(year = dayjs().year(), month = dayjs().month()) {
 		const startDate = dayjs().year(year).month(month).date(1);
 		const endDate = startDate.endOf("month");

@@ -25,6 +25,8 @@ export function NewLog() {
 			throw "Date or hour cannot be empty";
 		} else if (log.hour > 24) {
 			throw "Please enter a valid hour";
+		} else if (log.hour < 0) {
+			throw "Please enter a valid hour";
 		}
 	};
 	const submitLog = () => {
